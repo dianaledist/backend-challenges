@@ -1,4 +1,4 @@
-<p>Consigna</p>
+## Consigna:
 <p>Realizar un proyecto de servidor basado en node.js que utilice el middleware express e implemente tres endpoints en el puerto 8080:</p>
     <ul>
     <li>Ruta get '/items' que responda un objeto con todos los productos y su cantidad total en el siguiente formato: { items: [productos], cantidad: (cantidad productos) }</li>
