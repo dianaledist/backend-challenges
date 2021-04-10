@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div style="background: rgb(233, 153, 206);"><h1 style="text-align: center;">Desafío 4</h1>
+        <h2 style="text-align: center;">Diana Di Stefano - Backend Coderhouse</h2>
+    </div>
+
+    <p>Consigna 2</p>
+    <ul>
+    <li>Realizar un documento web que contenga un elemento input y que a medida de que escribo, se vaya mostrando a su derecha el texto en forma espejada. Utilizar un Observable para realizar esa función.</li>
+    <li>Este comportamiento estará disponible por 30 segundos. Luego de ese tiempo, se realizará la desuscripción automática. </li>
+    <li>Si en el lapso de tiempo activo se escribe ‘error’, el Observable terminará por error. Si se ingresa ‘complete’, el Observable terminará en forma normal. Indicar por la consola la razón del cierre de la función.</li>
+    <li>Una vez que el Observable no esté más operativo, desregistrar el evento de entrada, deshabilitar la escritura en el input y borrar el resultado de la operación.</li>
+    <li>En lugar de manejar la conversión de datos dentro del Observable, hacerlo utilizando el método pipe y operadores rxjs (a elección)</li>
+    </ul>
+
+    <input class="textInput" placeholder="Ingrese texto aquí">
+    <span class="spanMirror"></span>
+
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.6.6/rxjs.umd.min.js" integrity="sha512-r0R52UFUS1Wx7K9DKFCzPkZbmB0xVXJjc/sk9JByGAcHH2VXrj3tKBzmoYp9PgJm8xRVHlfjvDYN4mG7mhnv4w==" crossorigin="anonymous"></script>
+<script type="module" src="./scripts.js" ></script>
+
+
+</html>
