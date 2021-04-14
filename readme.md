@@ -8,7 +8,9 @@
 <li>Desafío 5: NodeJS server</li>
 <li>Desafío 6: Manejo de archivos</li>
 <li>Desafío 7: Express I</li>
+<li>Desafío 8: Express II</li>
 
 
-## Diana Leonor Di Stefano 💖
+## Realizado con 💖
+* **[Diana Leonor Di Stefano](https://www.linkedin.com/in/dianaledist/)** - *psychologist and digital designveloper* - <a href="mailto:diana.distefano@gmail.com">diana.distefano@gmail.com</a>
 </ul>

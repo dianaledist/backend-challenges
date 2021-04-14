@@ -13,6 +13,7 @@ app.get('/', (req,res) => {
     <li>Ruta get '/item-random' que devuelva un producto elegido al azar desde un array de productos que se encuentran en el archivo 'productos.txt'. <br>El formato de respuesta será: { item: {producto} }
     </li>
     <li>La ruta get '/visitas' devuelve un objeto que indica cuantas veces se visitó la ruta del punto 1 y cuantas la ruta del punto 2. <br>Contestar con el formato:  { visitas : { items: cantidad, item: cantidad } }</li>
+    <li>Tomar los datos desde un array de productos almacenado como string en el archivo 'productos.txt'</li>
     </ul>`)
 })
 
@@ -62,8 +63,8 @@ app.get('*', (req, res) =>{
 
 /* const server = app.listen(PORT, () => {
     console.log(`Servidor http escuchando en el puerto ${server.address().port}`)
-}) */
+})
 
-/* server.on("error", error => console.log(`Error en servidor ${error}`)) */
+server.on("error", error => console.log(`Error en servidor ${error}`)) */
 
 export default app;
