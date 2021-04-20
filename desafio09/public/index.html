@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <style>
+        body {
+            background-color: #f7f9fc;
+        }
+        .title {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 28px;
+            margin: 0 0 25px;
+        }
+        form {
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 30px 35px;
+            max-width: 400px;
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .input {
+            font-weight: 500;
+            padding: 0 20px;
+            height: 55px;
+            width: 100%;
+            border-radius: 12px;
+            background: #fff;
+            border: 2px solid #dde2ee;
+            outline: none;
+        }
+        .btn {
+            height: 50px;
+            padding: 0 50px;
+            border: none;
+            background: #316cec;
+            color: #fff;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+        }
+    </style> -->
+</head>
+<body>
+    <div style="background: rgb(233, 153, 206);"><h1 style="text-align: center;">Desafio 9</h1>
+        <h2 style="text-align: center;">Diana Di Stefano - Backend Coderhouse</h2>
+    </div>
+        <p>Consigna</p>
+        <p>Sobre el proyecto entregable de la clase anterior, incorporar las siguientes rutas:</p>
+        <ul>
+        <li>Actualizar un producto (put) : '/api/productos/:id' -> devuelve producto actualizado</li>
+        <li>Borrar un producto (delete) : '/api/productos/:id' -> devuelve producto eliminado</li>
+            <ol>
+            <li>Implementar las rutas put y delete junto a las funciones necesarias (utilizar la estructura ya creada).</li>
+            <li>Incorporar el Router de express en la url base '/api' y configurar todas las subrutas en base a este.</li>
+            <li>Crear un espacio público de servidor que contenga un documento index.html con un formulario de ingreso de productos con los datos apropiados.</li>
+            <li>Probar la funcionalidad con Postman y el formulario de ingreso de datos.
+            </li>
+            </ol>
+        </ul>
+        <a href="home">Ir a formulario para ingresar producto</a> <br>
+        <a href="api/productos">Ver productos totales</a>
+
+    <!-- <div>
+        <form action="api/productos" enctype="multipart/form-data" method="POST">
+            <h3 class="title">New product</h3>
+            <div>
+                <label for="title">Title</label>
+                <input class="input" type="text" id="title" name="title" required>
+            </div>
+            <div>
+                <label for="price">Price</label>
+                <input class="input" type="number" id="price" min=0 name="price" required>
+            </div>
+            <div>
+                <label for="thumbnail">Thumbnail</label>
+                <input type="FILE" id="thumbnail" name="thumbnail">
+            </div>
+            <input class="btn" type="submit" value="Save product">
+        </form>
+    </div> -->
+</body>
+</html>
