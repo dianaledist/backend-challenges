@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+
+</head>
+<body>
+    <div style="background: rgb(233, 153, 206);"><h1 style="text-align: center;">Desafio 10</h1>
+        <h2 style="text-align: center;">Diana Di Stefano - Backend Coderhouse</h2>
+    </div>
+    <div class="container">
+        <p>Consigna</p>
+        <p>Sobre el proyecto entregable de la clase anterior, incorporar y configurar el motor de plantillas handlebars para que permita ver mediante la ruta get '/productos/vista' los productos cargados.</p>
+        <ul>
+            <li>Realizar las plantillas correspondientes que permitan recorrer el array de productos y representarlo en forma de tabla dinámica, siendo sus cabeceras el nombre de producto, el precio y su foto (la foto se mostrará como un imágen en la tabla)</li>
+            <li>En el caso de no encontrarse datos, devolver el mensaje: 'No hay productos'</li>
+            <li>Utilizar bootstrap para maquetar la vista creada por dicho motor de plantillas.</li>
+            <li>Maquetar con bootstrap el formulario de ingreso de productos. Al guardar el producto, se debe redirigir la vista al formulario vacío.</li>
+            <li>Probar desde postman las demás funciones (actualizar y borrar producto) y ver el resultado reflejado en la tabla de productos.</li>
+        </ul>
+        <a href="home" class="btn btn-outline-primary">Ir a formulario para ingresar producto</a> 
+        <br>
+        <a href="api/productos" class="btn btn-outline-success">Ver productos totales en JSON</a> 
+        <br>
+        <a href="productos/vista" class="btn btn-outline-warning">Ver productos totales en tabla</a>
+    </div>
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+</body>
+</html>
