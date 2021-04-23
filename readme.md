@@ -10,7 +10,8 @@
 <li>Desafío 7: Express I</li>
 <li>Desafío 8: Express II</li>
 <li>Desafío 9: Express III</li>
-
+<li>Desafío 10: Motores de plantillas (Handlebars)</li>
+<li>Desafío 11: Motores de plantillas (Pug y EJS)</li>
 
 ## Realizado con 💖
 * **[Diana Leonor Di Stefano](https://www.linkedin.com/in/dianaledist/)** - *psychologist and digital designveloper* - <a href="mailto:diana.distefano@gmail.com">diana.distefano@gmail.com</a>
