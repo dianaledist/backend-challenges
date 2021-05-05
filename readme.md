@@ -12,6 +12,8 @@
 <li>Desafío 9: Express III</li>
 <li>Desafío 10: Motores de plantillas (Handlebars)</li>
 <li>Desafío 11: Motores de plantillas (Pug y EJS)</li>
+<li>Desafío 12: Websockets I</li>
+<li>Desafío 13: Websockets II</li>
 
 ## Realizado con 💖
 * **[Diana Leonor Di Stefano](https://www.linkedin.com/in/dianaledist/)** - *psychologist and digital designveloper* - <a href="mailto:diana.distefano@gmail.com">diana.distefano@gmail.com</a>
