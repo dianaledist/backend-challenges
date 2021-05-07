@@ -1,0 +1,19 @@
+<form autocomplete="off" id="form-producto" action="#" method="POST">
+    <h1 class="title">Nuevo producto</h1>
+    <div class="form-group">
+        <label for="title">Nombre del producto</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="Ingrese el nombre del producto" required>
+    </div>
+    <div class="form-group">
+        <label for="price">Precio del producto</label>
+        <input type="number" class="form-control" id="price" name="price" min=0 placeholder="Ingrese el precio del producto" required>
+    </div>
+    <div class="form-group">
+        <label for="thumbnail">URL de la imagen</label>
+        <input type="url" class="form-control" id="thumbnail" name="thumbnail" placeholder="Ingrese URL del producto" required>
+    </div>
+    <br>
+    <input class="btn btn-success mt-2" type="submit" value="Guardar producto">
+</form>
+
+<!-- onsubmit="return addProduct(this)" -->

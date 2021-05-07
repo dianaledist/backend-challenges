@@ -10,7 +10,7 @@
 
 </head>
 <body>
-    <div style="background: rgb(233, 153, 206);"><h1 style="text-align: center;">Desafio 12</h1>
+    <div style="background: rgb(233, 153, 206);"><h1 style="text-align: center;">Desafio 13</h1>
         <h2 style="text-align: center;">Diana Di Stefano - Backend Coderhouse</h2>
     </div>
     <div class="container">
@@ -19,6 +19,13 @@
         <ul>
             <li>Puede haber varios clientes conectados simultáneamente y en cada uno de ellos se reflejarán los cambios que se realicen en los productos sin necesidad de recargar la vista.</li>
             <li>Cuando un cliente se conecte, recibirá la lista de productos a representar en la vista.</li>
+        </ul>
+        <p>Añadiremos al proyecto un canal de chat (basado en websocket) entre el servidor y el cliente.</p>
+        <ul>
+            <li>En la parte inferior del formulario de ingreso se presentará el centro de mensajes almacenados en el servidor, donde figuren los mensajes de todos los usuarios identificados por su email. </li>
+            <li>El formato a representar será: email (texto negrita en azul) [fecha y hora (DD/MM/YYYY HH:MM:SS)](texto normal en marrón) : mensaje (texto italic en verde) </li>
+            <li>Además incorporar dos elementos de entrada: uno para que el usuario ingrese su email (obligatorio para poder utilizar el chat) y otro para ingresar mensajes y enviarlos mediante un botón. </li>
+            <li>Los mensajes deben persistir en el servidor en un archivo.</li>
         </ul>
 
         <a href="api/productos/vista" class="btn btn-outline-primary">Ir a formulario para ingresar producto</a> 

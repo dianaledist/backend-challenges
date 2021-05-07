@@ -14,7 +14,12 @@
 <li>Desafío 11: Motores de plantillas (Pug y EJS)</li>
 <li>Desafío 12: Websockets I</li>
 <li>Desafío 13: Websockets II</li>
+<li>Desafío 14: Traspiladores (Babel & Typescript)</li>
+</ul>
 
 ## Realizado con 💖
 * **[Diana Leonor Di Stefano](https://www.linkedin.com/in/dianaledist/)** - *psychologist and digital designveloper* - <a href="mailto:diana.distefano@gmail.com">diana.distefano@gmail.com</a>
-</ul>
+<br>
+<a href="https://github.com/dianaledist">Github</a>
+<a href="https://www.facebook.com/Soy.Diana.Distefano">Facebook</a>
+<a href="https://www.instagram.com/dianaledist/">Instagram</a>

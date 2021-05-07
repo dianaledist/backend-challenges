@@ -1,0 +1,27 @@
+<form id="form-mensajes" onsubmit="return addMessage(this)">
+    <h1 class="title">Canal de Chat</h1>
+    <div>
+        <label for="email">Email</label>
+        <input class="input form-control" type="text" id="email" name="email" required>
+    </div>
+
+    <hr>
+    <small class="form-text text-muted">Mensajes:</small>
+    <ul id="lista-mensajes">
+        <% message.forEach(function(item) { %>
+            <ul>
+                <li><strong style="color:blue"><%= item.email %> </strong>
+                    <span style="color:brown">[ <%= item.timestamp %> ] : </span>
+                    <em style="color:green"><%= item.mensaje %></em></li>
+                    <!-- <%= item.email + item.timestamp + item.mensaje %></li> -->
+            </ul>
+            <% }); %>
+    </ul>
+    <hr>
+
+    <div>
+        <label for="mensaje">Mensaje</label>
+        <input class="input form-control" type="text" id="mensaje" name="mensaje" required>
+    </div>
+    <input class="btn btn-success" type="submit" value="Enviar mensaje">
+</form>
