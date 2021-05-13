@@ -1,0 +1,32 @@
+<h1>Vista de Productos</h1>
+ 
+    <% if( existe!==0){ %>
+    <table class="table table-dark table-striped" >
+    <thead>
+        <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Price</th>
+        <th scope="col">Picture</th>
+        </tr>
+    </thead>
+    <tbody id="tabla-products">  
+           <% data.forEach(function(item) { %>
+            <tr>
+                <td><%= item.title %></td>
+                <td><%= item.price %></td>
+                <td><img src='<%= item.thumbnail %>' alt="<%= item.title %>" style="width: 90px;"></td>   
+            </tr>
+            <% }); %>
+            
+    </tbody>
+    </table> 
+        
+    <% } else if(data.length===0) { %>
+        <h2 class="alert alert-warning">No se encontraron productos!</h2>
+        <br>
+        <a href="/" class="btn btn-success mb-2">Ir a home</a>
+        <br>
+    
+    <% } else { %>
+        <h2>No hay nada</h2>
+    <% }; %>

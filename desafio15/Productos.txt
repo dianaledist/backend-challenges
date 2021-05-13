@@ -1,0 +1,1 @@
+[{"id":"1","timestammp":"2021-05-12T23:09:08.484Z","nombre":"Calculator","descripcion":"Hermosa calculadora","codigo":"12548","foto":"https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png","precio":"1866","stock":"5"}]

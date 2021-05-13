@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  
+    <title><%= title %></title>
+    <script src="/socket.io/socket.io.js"></script>
+
+</head>
+<body  style="background-color: rgb(218, 216, 216);">
+
+    <section class="container">
+        <h3 id='productTitle'>Productos disponibles</h3>
+
+        <% if(data.length!==0) { %>
+        <div class="row tablaCard">
+            <% data.forEach(function(item) { %>
+                <div class="card col-12 col-md-3 m-2" style="width: 18rem;">
+                    <img class="card-img-top" src="<%= item.foto %>" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title"><%= item.nombre %></h5>
+                    <h4 class="card-subtitle"><%= item.nombre %></h4>
+                    <p class="card-text"><%= item.descripcion %></p>
+                    <a href="#" class="btn btn-primary">Actualizar</a>
+                    <a href="#" class="btn btn-danger">Eliminar</a>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+        <% } else if(data.length===0) { %>
+            <h2 class="alert alert-warning">No se encontraron productos!</h2>
+            <br>        
+        <% } %>
+    </section>
+
+
+    <section class="container">
+        <h3 id='productTitle'>Agregar productos</h3>
+        
+        <form autocomplete="off" id="form-producto" action="#" method="POST">
+            <h1 class="title">Nuevo producto</h1>
+            <div class="form-group">
+                <label for="title">Nombre del producto</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese el nombre del producto" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Precio del producto</label>
+                <input type="number" class="form-control" id="precio" name="precio" min=0 placeholder="Ingrese el precio del producto" required>
+            </div>
+            <div class="form-group">
+                <label for="thumbnail">URL de la imagen</label>
+                <input type="url" class="form-control" id="foto" name="foto" placeholder="Ingrese URL del producto" >
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción</label>
+                <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Ingrese descripción del producto" >
+            </div>
+            <div class="form-group">
+                <label for="codigo">Código</label>
+                <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Ingrese código del producto" >
+            </div>
+            <div class="form-group">
+                <label for="stock">Stock</label>
+                <input type="number" class="form-control" id="stock" name="stock" placeholder="Ingrese stock del producto" >
+            </div>
+            <br>
+            <input class="btn btn-success mt-2" type="submit" value="Guardar producto">
+        </form>  
+
+      </section>
+
+
+      <script>
+          const socket = io.connect();
+
+
+        const formProducto = document.querySelector('#form-producto');
+        const tablaCard= document.querySelector('.tablaCard');
+
+        const nombre = document.querySelector('#nombre');
+        const precio = document.querySelector('#precio');
+        const foto = document.querySelector('#foto');
+        const descripcion = document.querySelector('#descripcion');
+        const codigo = document.querySelector('#codigo');
+        const stock = document.querySelector('#stock');
+
+       
+        
+        formProducto.addEventListener('submit', function(e) {
+            e.preventDefault();
+            if(nombre.value || precio.value ) {
+                let producto = {
+                    nombre: nombre.value,
+                    precio: precio.value
+            }
+
+            socket.emit('products', producto);
+            console.log(producto)
+            nombre.value = '';
+            precio.value = '';
+            }
+        })
+
+        socket.on('products', function(producto) {
+            console.log(producto)
+            const item = document.createElement('div');
+            item.classList.add("card col-12 col-md-3 m-2");
+            item.innerHTML = `
+                    <img class="card-img-top" src="${item.foto}" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title"><${item.nombre}></h5>
+                    <h4 class="card-subtitle"><${item.nombre}></h4>
+                    <p class="card-text"><${item.descripcion}></p>
+                    <a href="#" class="btn btn-primary">Actualizar</a>
+                    <a href="#" class="btn btn-danger">Eliminar</a>
+                    </div>
+                    `;
+            tablaCard.appendChild(item);
+        });
+
+
+
+      </script>
+
+</body>
+</html>

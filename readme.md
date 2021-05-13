@@ -15,6 +15,7 @@
 <li>Desafío 12: Websockets I</li>
 <li>Desafío 13: Websockets II</li>
 <li>Desafío 14: Traspiladores (Babel & Typescript)</li>
+<li>Desafío 15: Primera entrega del Trabajo Integrador</li>
 </ul>
 
 ## Realizado con 💖
