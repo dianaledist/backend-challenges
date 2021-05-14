@@ -16,6 +16,7 @@
 <li>Desafío 13: Websockets II</li>
 <li>Desafío 14: Traspiladores (Babel & Typescript)</li>
 <li>Desafío 15: Primera entrega del Trabajo Integrador</li>
+<li>Desafío 16: SQL y Node.js</li>
 </ul>
 
 ## Realizado con 💖
