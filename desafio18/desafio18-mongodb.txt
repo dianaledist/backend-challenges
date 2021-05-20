@@ -1,0 +1,22 @@
+Desafío 18
+
+//Iniciar mongogb
+mongo
+
+//Crear database 'prueba'
+use prueba
+
+//Ver en qué database tenemos posición
+db 
+
+//Crear colección 'items'
+db.items.insertMany([{nombre:"Fideos", categoria:"Harina", stock:"20"},{nombre:"Leche", categoria:"Lácteos", stock:"30"},{nombre:"Crema", categoria:"Lácteos", stock:"15"}])
+
+//Mostrar elementos de la colección
+db.items.find()
+
+//Mostrar colecciones
+show collections
+
+//Mostrar bases de datos 
+show dbs
