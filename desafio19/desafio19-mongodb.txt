@@ -1,0 +1,137 @@
+//Iniciar mongogb
+mongo
+
+//Crear database 'ecommerce'
+use ecommerce
+
+//Ver en qué database tenemos posición
+db 
+
+
+////////////CRUD////////////////
+
+//Crear colecciones
+db.createCollection("mensajes")
+db.createCollection("productos")
+
+//Crear items para 'mensajes' y 'productos'
+db.mensajes.insertMany([{email: "persona@hotmail.com", message: "Hola"},{email: "somebody@hotmail.com", message: "Hey!!"},{email: "persona@hotmail.com", message: "Cómo estás?"},{email: "people@hotmail.com", message: "Hola, recién me sumo"},{email: "persona@hotmail.com", message: "Jaja, no pasa nada"},{email: "somebody@hotmail.com", message: "Muy bien, por suerte! Ustedes?"},{email: "people@hotmail.com", message: "Con bocha de trabajo pero todo bien"},{email: "persona@hotmail.com", message: "Días intensos con esta cuarentena"},{email: "jajaja@hotmail.com", message: "Puff si, pero dicen que se va a poder salir pronto (? "}, {email: "somebody@hotmail.com", message: "Ojalá, ya no doy más, lo único que hago es trabajar ¬¬"}, {email: "people@hotmail.com", message: "Posta, al final nos terminamos enfermando acá dentro!"}])
+
+db.productos.insertMany([
+  {
+    nombre: "Botella",
+    descripcion: "Botella con envase retornable",
+    codigo: 365,
+    precio: 1874
+  },
+  {
+    nombre: "Vasos",
+    descripcion: "Para tomar bebida o sopitas",
+    codigo: 190,
+    precio: 3700
+  },  
+{
+    nombre: "Tenedor",
+    descripcion: "De acero inoxidable",
+    codigo: 865,
+    precio: 300
+  },
+  {
+    nombre: "Cuchillo carnicero",
+    descripcion: "El más afilado del mundo",
+    codigo: 512,
+    precio: 4500
+  },
+  {
+    nombre: "Plato hondo",
+    descripcion: "Para los guisos ricos",
+    codigo: 456,
+    precio: 2376
+  },
+  {
+    nombre: "Set de cucharas",
+    descripcion: "De impecable acero inoxidable",
+    codigo: 723,
+    precio: 3489
+  },
+  {
+    nombre: "Fuente de vidrio",
+    descripcion: "Una fuente cuadrada para el horno",
+    codigo: 299,
+    precio: 2500
+  },
+  {
+    nombre: "Tabla de plástico",
+    descripcion: "Perfecta para cortar las verduras",
+    codigo: 578,
+    precio: 700
+  },
+  {
+    nombre: "Sartén",
+    descripcion: "Especial para carne a la plancha",
+    codigo: 257,
+    precio: 3768
+  },
+  {
+    nombre: "Esponja de acero",
+    descripcion: "Ningún resto de comida en tus platos",
+    codigo: 623,
+    precio: 250
+  },
+]
+)
+
+//Contar cantidad de items en 'productos' y verificar el insertOne
+db.productos.count()
+
+// C
+// Listar items de ambas colecciones
+db.mensajes.find().pretty()
+db.productos.find().pretty()
+
+//Agregar un producto en la colección 'productos'
+db.productos.insertOne({
+    nombre: "Termo",
+    descripcion: "Mantiene la temperatura de tus bebidas",
+    codigo: 867,
+    precio: 2200
+  })
+
+
+// R
+//Listar productos según condiciones (menor a 1000, entre 1000 y 3000, mayor a 3000)
+db.productos.find({precio: {$lt: 1000}}, {"nombre": 1});
+db.productos.find({$and: [{precio: {$gt:1000}}, {precio: {$lt:3000}} ]} , {"nombre": 1})
+db.productos.find({precio: {$gt: 3000}}, {"nombre": 1});
+
+//Mostrar el tercer producto más barato
+db.productos.find({}).sort({"precio":1}).skip(2).limit(1);
+
+// U
+//Actualizar productos con nueva característica de stock
+db.productos.updateMany({}, {$set: {"stock": 100}}, {upsert: true});
+
+//Cambiar stock a 0 para productos con precios mayor a 4000
+db.productos.update({precio: {$gt: 4000}}, {$set: {"stock": 0}}, {multi: true});
+
+// D
+//Borrar productos menores a 1000
+db.productos.deleteMany({precio: {$lt: 1000}});
+
+//Crear user que solo pueda leer la database
+use admin
+
+db.createUser(
+  {
+    user: "pepe",
+    pwd: "asd456",
+    roles: [
+       { role: "read", db: "ecommerce" }
+    ]
+  }
+)
+
+
+//Pruebas
+mongo -u pepe -p asd456
+mongo --port 27017  --authenticationDatabase "ecommerce" -u "pepe" -p
