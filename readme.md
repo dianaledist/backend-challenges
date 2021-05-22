@@ -16,7 +16,10 @@
 <li>Desafío 13: Websockets II</li>
 <li>Desafío 14: Traspiladores (Babel & Typescript)</li>
 <li>Desafío 15: Primera entrega del Trabajo Integrador</li>
-<li>Desafío 16: SQL y Node.js</li>
+<li>Desafío 16: SQL y Node.js I</li>
+<li>Desafío 17: SQL, SQLite y Node.js II</li>
+<li>Desafío 18: MongoDB I</li>
+<li>Desafío 19: CRUD en MongoDB II</li>
 </ul>
 
 ## Realizado con 💖
