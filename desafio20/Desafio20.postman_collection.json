@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "434ed399-4bac-4b6a-ae6b-abcace33840a",
+		"name": "Desafio20",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/show",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"show"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ItemsById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/60b79bd3aacd8606b8bab8bb/show",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"60b79bd3aacd8606b8bab8bb",
+						"show"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Items",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Leche\",\r\n    \"categoria\": \"Lácteos\",\r\n    \"stock\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Items",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Cilantro\",\r\n    \"categoria\": \"Verdulería\",\r\n    \"stock\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/60b79862e547c145c0b6f4b8/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"60b79862e547c145c0b6f4b8",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Items",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/60b79828f9eab138809a89ab",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"60b79828f9eab138809a89ab"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

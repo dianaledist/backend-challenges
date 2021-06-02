@@ -20,6 +20,7 @@
 <li>Desafío 17: SQL, SQLite y Node.js II</li>
 <li>Desafío 18: MongoDB I</li>
 <li>Desafío 19: CRUD en MongoDB II</li>
+<li>Desafío 20: Mongoose</li>
 </ul>
 
 ## Realizado con 💖
