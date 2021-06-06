@@ -21,6 +21,7 @@
 <li>Desafío 18: MongoDB I</li>
 <li>Desafío 19: CRUD en MongoDB II</li>
 <li>Desafío 20: Mongoose</li>
+<li>Desafío 21: Segunda entrega del Trabajo Integrador</li>
 </ul>
 
 ## Realizado con 💖
