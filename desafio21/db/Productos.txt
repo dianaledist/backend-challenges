@@ -1,0 +1,12 @@
+[
+	{
+		"_id": 1,
+		"nombre": "Cosita",
+		"descripcion": "Algo increible para vos",
+		"timestamp": "06/06/2021",
+		"codigo": "GHD4578",
+		"precio": 46,
+		"foto": "http://.com",
+		"stock": 30
+	}
+]

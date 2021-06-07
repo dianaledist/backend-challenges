@@ -1,14 +1,8 @@
 import express from 'express';
 import  crearItemRouter  from './routes/item.routes.js';
-import {PORT, mongoLocalURI} from './config/index.js';
-import mongoose from 'mongoose';
+import {PORT} from './config/index.js';
 
-mongoose.connect(mongoLocalURI, {
-    useNewUrlParser: true,
-    useCreateIndex: true, 
-    useUnifiedTopology: true
-}).then(res => console.log(`Conexión a mongoose exitosa! ✨`))
-    .catch(err => console.log(`Error en el servidor!! ❌ ${err}`));
+async function serverInit(){
 
 const app = express();
 app.use(express.json());
@@ -22,7 +16,7 @@ app.get('/', (req, res) => {
     })
 })
 
-app.use('/api', crearItemRouter());
+app.use('/api', await crearItemRouter());
 
 app.get('*', (req, res) =>{
     res.render('../views/404.ejs', {
@@ -37,3 +31,6 @@ const srv=app.listen(PORT, () => {
 
 srv.on("error", (error) => console.log(`Error en servidor ${error}`))
 
+}
+
+serverInit()
