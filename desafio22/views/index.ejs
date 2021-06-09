@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+
+</head>
+<body>
+    <div style="background: rgb(233, 153, 206);"><h1 style="text-align: center;">Desafio 22</h1>
+        <h2 style="text-align: center;">Diana Di Stefano - Backend Coderhouse</h2>
+    </div>
+    <div class="container">
+            <ul>
+                <li>Sobre el desafío entregable de la clase número 20, crear una ruta 'productos/vista-test' que permita mostrar productos generados al azar en forma de tabla (similar a lo realizado sobre la ruta 'productos/vista').</li>
+                <li>Los productos se generarán utilizando Faker.js como generador de información aleatoria de test (en lugar de tomarse desde la base de datos). Elegir apropiadamente los temas para conformar el objeto ‘producto’: nombre, precio y foto.
+                </li>
+                <li>Considerar pasar por query params la cantidad de productos a generar: Ej. 'productos/vista-test?cant=5'. De no pasar ningún valor, producirá 10 objetos.</li>
+                <li>Verificar la generación de productos aleatorios utilizando distintas cantidades. Comprobar que para cantidad 0 indique que no hay productos.</li>
+            </ul>
+
+        <h2>Scripts a utilizar</h2>
+        <p><strong>npm run start</strong> => Funciona el script con babel y nodemon </p>
+
+        <a href="productos/vista-test" class="btn btn-outline-primary">Listar items</a>
+        <a href="productos/vista-test?cant=1" class="btn btn-outline-primary">Listar items con query params</a>
+    </div>
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+</body>
+</html>
