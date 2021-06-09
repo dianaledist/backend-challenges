@@ -22,6 +22,7 @@
 <li>Desafío 19: CRUD en MongoDB II</li>
 <li>Desafío 20: Mongoose</li>
 <li>Desafío 21: Segunda entrega del Trabajo Integrador</li>
+<li>Desafío 22: Mocks de datos con Faker</li>
 </ul>
 
 ## Realizado con 💖

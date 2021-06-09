@@ -28,7 +28,7 @@ class ItemMysqlController{
     }
 
     async apiGetAllItems(){
-        const prod = await knex.from("productos").select()
+        const prod = await knex.select().from("productos")
         console.log(prod)
     }
 }
