@@ -23,6 +23,7 @@
 <li>Desafío 20: Mongoose</li>
 <li>Desafío 21: Segunda entrega del Trabajo Integrador</li>
 <li>Desafío 22: Mocks de datos con Faker</li>
+<li>Desafío 23: JSON normalizr</li>
 </ul>
 
 ## Realizado con 💖
