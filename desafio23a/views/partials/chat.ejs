@@ -1,0 +1,38 @@
+<form id="form-mensajes" onsubmit="return addMessage(this)">
+ 
+    <small class="form-text text-muted">Mensajes:</small>
+    <ul id="lista-mensajes">
+        <% message.forEach(function(item) { %>
+            <ul>
+                <li><strong style="color: #EF4423"><%= item.email %> </strong>
+                    <span>[ <%= item.nombre %> ]</span><span>(<%= item.edad %>) </span>
+                    <span style="color: #4FAF44">[ <%= item.timestamp %> ]: </span>
+                    
+                    <br>
+                    <em style="color: #F6EB14"><%= item.mensaje %></em>
+                </li>
+            </ul>
+        <% }); %>
+    </ul>
+    <hr>
+    <div>
+        <label for="email">Email</label>
+        <input class="nes-input" type="text" id="email" name="email" required>
+    </div>
+    <hr>
+    <div>
+        <label for="nombre">Nombre</label>
+        <input class="nes-input" type="text" id="nombre" name="nombre" required>
+    </div>
+    <hr>
+    <div>
+        <label for="nombre">Edad</label>
+        <input class="nes-input" type="number" id="edad" name="edad" required>
+    </div>
+    <hr>
+    <div>
+        <label for="mensaje">Mensaje</label>
+        <input class="nes-input" type="text" id="mensaje" name="mensaje" required>
+    </div>
+    <input class="nes-btn" type="submit" value="Enviar mensaje">
+</form>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- minify -->
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+
+    <title><%= title %></title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/moment"></script>
+    <style>
+        .bg-gray {
+            background-color: rgb(247, 221, 239);
+        }
+    </style>
+    
+</head>
+<body style="background-color:#212529; height: 100vh;">
+    <nav style="display: flex; justify-content: flex-end;">
+        
+        <a class="nes-btn is-dark" href="/">⬅ Volver a home</a>
+    </nav>
+    
+    <div class="nes-container with-title is-dark" style="height: 90vh; color: white;" >
+        <p class="title">Chatea en vivo <a href="/"><img src="catty.jpg" style="height: 40px; padding: 3px;"></a></p>
+        <%- include('./partials/chat'); %>
+    </div>
+
+    <script>
+        const socket = io.connect();
+
+        /// FUNCIONES CHAT
+
+        let formMensajes = document.querySelector("#form-mensajes")
+        let email = document.querySelector("#email")
+        let nombre = document.querySelector("#nombre")
+        let edad = document.querySelector("#edad")
+        let mensaje = document.querySelector("#mensaje")
+        let messageList = document.querySelector("#lista-mensajes")
+
+        function addMessage(e){
+            if(email.value && mensaje.value) {
+                let message = {
+                    email: email.value, 
+                    nombre:nombre.value,
+                    edad: edad.value,
+                    timestamp: moment().format('DD/MM/YYYY h:mm:ss a'), 
+                    mensaje: mensaje.value 
+                }
+                socket.emit('cliente-mensaje', message);
+                mensaje.value = ''; 
+            }
+        }
+
+        socket.on('server-mensaje', message => {
+            console.log(message);
+            const item = document.createElement('ul');
+            item.innerHTML = `<li><strong>${message.email} </strong>` + `<strong>${message.nombre} </strong>`
+                - `<strong>${message.edad} </strong>`+`<span>[ ${message.timestamp} ] : </span>` +
+                `<em>${message.mensaje}</em></li>`;
+            messageList.appendChild(item);
+        });
+        
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js
+    "></script>
+</body>
+</html>

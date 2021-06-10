@@ -1,0 +1,31 @@
+{
+  "name": "chat-vintage",
+  "version": "1.0.0",
+  "description": "Un chat vintage para personas nostálgicas",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js --exec babel-node -e js"
+  },
+  "keywords": [
+    "chat",
+    "vintage",
+    "geek",
+    "live"
+  ],
+  "author": "Diana Leonor Di Stefano <diana.distefano@gmail.com> (https://github.com/dianaledist)",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-node": "*",
+    "babel-preset-env": "^1.7.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "knex": "^0.95.6",
+    "mongoose": "^5.12.13",
+    "nodemon": "^2.0.7",
+    "normalizr": "^3.6.1",
+    "socket.io": "^4.0.1",
+    "sqlite3": "^5.0.2"
+  }
+}
